@@ -4,11 +4,11 @@ var getFeed = function(index, callback){
 };
 
 var currentPage = 0;
+
 var displayFeed = function(index,callback){
 	var rawResult=getFeed(index, function(result) {
 		console.log(result);
 		var feedInfo = result.response.feed_info
-
 		for (var i = 0; i < feedInfo.length; i++){
 			var interactions = feedInfo[i].interaction_counts
 			var interaction_info = $('<ul>', 
@@ -28,14 +28,13 @@ var displayFeed = function(index,callback){
 						  html: $('<h5>', {class:'title', text:feedInfo[i].title})
 						}).append(video,interaction_info)
 			}).appendTo('.main-container');
-			console.log(feedInfo[i].video_urls.encoded[0].url);
 		}
 		$('<div>',{
 			class:"container",
 			id:"more",
 			html:$("<div>",
 				{class:"stream",
-				 html:$("<h1>").text("MORE")})
+				 html:$("<h1>").text("MORE VIDEOS")})
 		}).appendTo(".main-container");
 		callback();
 	});
