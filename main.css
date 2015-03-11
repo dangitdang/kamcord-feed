@@ -1,14 +1,52 @@
 html,body {
 	width:100%;
-	height: 100%	
+	height: 100%;
+	margin:0;	
+}
+button {
+	background-color: blue;
+	color:white;
+	border: 0;
+	width: 70px;
+	height: 30px;
+	position: absolute;
+	bottom:10px;
+	border-radius: 5px;
+}
+
+#prev {
+	left: 50px;
+}
+
+#next{
+	right: 50px;
+}
+.main-title {
+	top:0;
+	position:fixed;
+	width: 100%;
+	text-align: center;
+	background-color: white;
+	z-index: 1;
+	border-bottom: thin solid black;
+	font-family: 'Open Sans', sans-serif;
+}
+#heading {
+
+}
+.main-container{
+	margin-top: 50px;
 }
 
 .container {
 	width: 100%;
-	padding-bottom: 100%;
-	background-color: blue;
+	padding-bottom: 80%;
 	float: left;
 	position: relative;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
 }
 
 .stream{
@@ -17,29 +55,72 @@ html,body {
 	right: 10px;
 	top:15px;
 	bottom: 15px;
-	background-color: green;
+	overflow: hidden;
 }
 
-@media only screen and (max-width : 650px) and (min-width : 481px) {
-   /* Tablet view: 2 tiles */
+.stream video {
+	width: 100%;
+	height:80%;
+	position: absolute;
+	bottom:-10px;
+}
+
+.title {
+	max-height: 20%;
+	margin-top: 7%;
+	margin-bottom: 7%;
+	text-align: center;
+	font-size: 1.1rem;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.info {
+	position: absolute;
+	margin-bottom: -50px;
+	background: rgba(0, 0, 0, 0.5);
+	bottom:0;
+	left:0;
+	right:0;
+	padding: 15px;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+	color:white;
+}
+
+.container:hover .info{
+	margin-bottom: 0px;
+}
+
+.container:hover{
+	background-color: #3689C4;
+	color:white;
+}
+.info li {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.comments{
+	float:right;
+	margin-right: 0px
+}
+@media only screen and (max-width : 1050px) and (min-width : 481px) {
    .container {
       width: 50%;
-      padding-bottom: 50%;
+      padding-bottom: 40%;
+   }
+   .stream video {
+      height:80%;
    }
 }
 
-@media only screen and (max-width : 1050px) and (min-width : 651px) {
-   /* Tablet view: 2 tiles */
-   .container {
-      width: 33.3%;
-      padding-bottom: 33.3%;
-   }
-}
 
 @media only screen and (min-width : 1051px) {
-   /* Tablet view: 2 tiles */
+
    .container {
       width: 25%;
-      padding-bottom: 25%;
+      padding-bottom: 20%;
    }
 }

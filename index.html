@@ -1,42 +1,27 @@
-<DOCTYPE! html>
+<!DOCTYPE html>
 	<html>
 		<head>
 			<title> Kamkord Coding Challenge</title>
 			<script src="http://code.jquery.com/jquery-1.11.2.min.js"> </script>
-			<script src="streams.js"></script>
+			<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 			<link rel="stylesheet" href="main.css" type="text/css">
+			<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		</head>
 		<body>
-			<div class="container">
-				<div class="stream">
-				hello
-				</div>
-			</div>
-			<div class="container">
-				<div class="stream">
-				</div>
-			</div>
-
-			<div class="container">
-				<div class="stream">
-				</div>
-			</div>
-
-			<div class="container">
-				<div class="stream">
-				</div>
-			</div>
-
-			<div class="container">
-				<div class="stream">
-				</div>
-			</div>
-
+		<div class="main-title">
+			<h1 id="heading"> Kamcord Video Feed </h1>
+			<button style="float:left" id="prev">Previous</button>
+			<button style="float:right" id="next">Next</button>
+		</div>
+		<div class="main-container">
+		</div>
+		<script src="streams.js"></script>
 		<script>
-			$(function (){
-				console.log(getFeed(0));
-			})
+		$(function(){
+			$('img').click(function(){
+				alert('clicked');
+			});
+		});
 		</script>
-
 		</body>
 	</html>
